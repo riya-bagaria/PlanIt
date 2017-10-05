@@ -56,7 +56,7 @@ app.post("/plan",function(req,res){
     var ppcost=req.body.ppcost;
     var address=req.body.address;
     var specification=req.body.specification;
-    var newPackage={name:placeName,image:image,ppcost:ppcost,venue:address,specification:specification};
+    var newPackage={placeName:placeName,image:image,ppcost:ppcost,venue:address,specification:specification};
     //create a new package  and save to database
     Package.create(newPackage,function(err,newpackage){
         if(err){
