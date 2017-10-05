@@ -20,24 +20,6 @@ var packageSchema = new mongoose.Schema({
 });
 var Package = mongoose.model("Package", packageSchema);
 
-/* Package.create(
-    {name:"Area 51", image:"http://apnaajaipur.com/public/site/images/products/deal_images/deal_image_0_35c2c88c8bd5ade149b5f56d8d91aa3620160918060518Area%20511.jpg",
-     ppcost:"500", 
-     venue:"near mango hotel,RajaPark",
-     specification:"RoofTop, lounge"},
-    function(err, package){
-        if(err){
-            console.log(err);
-        }
-        else{
-            console.log("NEWLY CREATED PACKAGE");
-            console.log(package);
-        }
-    }); */
-/* var packages=[
-    {name:"Area 51", image:"http://apnaajaipur.com/public/site/images/products/deal_images/deal_image_0_35c2c88c8bd5ade149b5f56d8d91aa3620160918060518Area%20511.jpg", ppcost:"500", venue:"near mango hotel,RajaPark",specification:"RoofTop, lounge"},
-    {name:"Area 51", image:"http://apnaajaipur.com/public/site/images/products/deal_images/deal_image_0_35c2c88c8bd5ade149b5f56d8d91aa3620160918060518Area%20511.jpg", ppcost:"500", venue:"near mango hotel,RajaPark",specification:"RoofTop, lounge"}
-]; */
 app.get("/", function (req, res) {
     res.render("home");
 });
@@ -118,6 +100,16 @@ app.put("/plan/:id",function(req,res){
 });
 
 //destroy package
+app.delete("/plan/:id",function(req,res){
+    Package.findByIdAndRemove(req.params.id,function(err){
+        if(err){
+            res.redirect("/plan");
+        }
+        else{
+            res.redirect("/plan");
+        }
+    });
+});
 app.listen(3000, function () {
     console.log("The YelpCamp server has started");
 });

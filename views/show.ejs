@@ -13,4 +13,11 @@
         <%= package.specification %>
     </h5>
     <br />
+    <a href="/plan/<%= package._id %>/edit" class="button is-warning">
+        Edit
+      </a>
+      <form action="/plan/<%= package._id %>?_method=DELETE" method="POST">
+        <input type="submit" class="button is-danger" value="Delete">
+    </form>
+
     <% include partials/footer %>
