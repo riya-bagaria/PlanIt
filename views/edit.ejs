@@ -1,0 +1,46 @@
+<% include partials/header %>
+<div class="title has-text-centered">Edit <%= package.placeName %></div>
+<div class="container">
+    <div class="box">
+        <form action="/plan/<%= package._id %>?_method=PUT" method="POST">
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                    <input class="input" type="text" name="package[placeName]" value="<%= package.placeName %>">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Image</label>
+                <div class="control">
+                    <input class="input" type="text" name="package[image]" value="<%= package.image %>">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Per Person Cost</label>
+                <div class="control">
+                    <input class="input" type="text" name="package[ppcost]" value="<%= package.ppcost %>">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Venue</label>
+                <div class="control">
+                    <input class="input" type="text" name="package[address]" value="<%= package.address %>">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Specification</label>
+                <div class="control">
+                    <input class="input" type="text" name="package[specification]" value="<% package.specification %>">
+                </div>
+            </div>
+            <div class="control">
+                    <button class="button is-primary">Submit</button>
+                  </div>
+        </form>
+        <a href="/plan">Go Back</a>
+    </div>
+</div>
+<% include partials/footer %>

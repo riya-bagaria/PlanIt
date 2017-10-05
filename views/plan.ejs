@@ -6,9 +6,12 @@
         <h1 class="title"><%= package.placeName %></h1>
         <img src="<%= package.image %>">
         <h5><%= package.ppcost %></h5>
-        <h5><%= package.venue %></h5>
-        <h5><%= package.specification %></h5>
+ <!--        <h5><%= package.venue %></h5>
+        <h5><%= package.specification %></h5> -->
         <br />
+        <a href="/plan/<%= package._id %>" class="button is-primary">
+            More Info
+          </a>
     </div>
 <% }) %> %>
 

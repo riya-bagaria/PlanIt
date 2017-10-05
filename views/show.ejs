@@ -1,0 +1,16 @@
+<% include partials/header %>
+    <p class="title">
+        <%= package.placeName %>
+    </p>
+    <img src="<%= package.image %>">
+    <h5>Per person Cost
+        <%= package.ppcost %>
+    </h5>
+    <h5>Address:--
+        <%= package.address %>
+    </h5>
+    <h5>Specification:--
+        <%= package.specification %>
+    </h5>
+    <br />
+    <% include partials/footer %>
