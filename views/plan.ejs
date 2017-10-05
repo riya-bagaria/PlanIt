@@ -1,0 +1,15 @@
+<% include partials/header %>
+<h1 class="title has-text-centered">Plan</h1>
+<a href="/plan/new">Add new Plan</a>
+<% packages.forEach(function(package){ %>
+    <div>
+        <h1 class="title"><%= package.name %></h1>
+        <img src="<%= package.image %>">
+        <h5><%= package.ppcost %></h5>
+        <h5><%= package.venue %></h5>
+        <h5><%= package.specification %></h5>
+        <br />
+    </div>
+<% }) %> %>
+
+<% include partials/footer %>

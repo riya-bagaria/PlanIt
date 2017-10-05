@@ -1,0 +1,46 @@
+<% include partials/header %>
+    <div class="title has-text-centered">Add New Plan from Here!!!!</div>
+    <div class="container">
+        <div class="box">
+            <form action="/plan" method="POST">
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input class="input" type="text" name="placeName" placeholder="Area 51">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Image</label>
+                    <div class="control">
+                        <input class="input" type="text" name="image" placeholder="alexsmith.jpg">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Per Person Cost</label>
+                    <div class="control">
+                        <input class="input" type="text" name="ppcost" placeholder="500-700">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Venue</label>
+                    <div class="control">
+                        <input class="input" type="text" name="address" placeholder="Near Rambagh, Rajapark, Jaipur">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Specification</label>
+                    <div class="control">
+                        <input class="input" type="text" name="specification" placeholder="RoofTop, Ac ">
+                    </div>
+                </div>
+                <div class="control">
+                        <button class="button is-primary">Submit</button>
+                      </div>
+            </form>
+            <a href="/plan">Go Back</a>
+        </div>
+    </div>
+    <% include partials/footer %>
